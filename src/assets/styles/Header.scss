@@ -1,0 +1,85 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+  border-bottom: 1px solid var(--very-light-pink);
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  width: 96vw;
+  height: 59px;
+}
+.navbar__menu {
+  display: none;
+  width: 30px;
+}
+
+.navbar__logo {
+  width: 150px;
+}
+.navbar__left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.navbar__left,
+.navbar__right {
+  display: flex;
+}
+.navbar__left a {
+  display: flex;
+}
+.navbar__left ul {
+  margin-left: 12px;
+}
+.navbar__left ul li a {
+  text-decoration: none;
+  color: var(--very-light-pink);
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+.navbar__left ul li a:hover {
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+
+.navbar__shopping-icon {
+  display: flex;
+  margin: 0 10px;
+  cursor: pointer;
+  width: 40px;
+}
+
+.navbar__shopping-icon img {
+  width: 30px;
+}
+.navbar__shopping-icon div {
+  width: 16px;
+  height: 16px;
+  background-color: var(--green);
+  border-radius: 50%;
+  font-size: var(--sm);
+  font-weight: bold;
+  padding: 2px;
+  margin-left: 15px;
+  position: absolute;
+  text-align: center;
+  margin-top: 5px;
+}
+@media (max-width: 640px) {
+  .navbar__menu {
+    display: block;
+  }
+  .navbar__logo {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .navbar__left ul {
+    display: none;
+  }
+}

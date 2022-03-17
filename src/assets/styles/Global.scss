@@ -1,0 +1,87 @@
+:root {
+  --white: #ffffff;
+  --white-hover: #faf5f5;
+  --black: #000000;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --green: #53e566;
+  --green-hover: #5ccc6b;
+  --green2: #0de3c7;
+  //--coral: #e45156;
+  --coral: #f30d0dd6;
+  --purple: #007185;
+  --coral-hover: #f70303;
+  --a: #f50;
+  --addCart:#ef8108;
+  --addCart-hover:#ef7f08ec;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+  --xl: 20px;
+  --gridList-column: 250px;
+  --gridList-rows: 250px;
+  --gridList-gap: 6px;
+}
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.login__button {
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--sm);
+  font-weight: bold;
+  height: 45px;
+  margin-top: 14px;
+  margin-bottom: 30px;
+  display: grid;
+  text-decoration: none;
+  &--primary {
+    background-color: var(--green);
+    border: none;
+    place-items: center;
+    color: var(--white);
+    &:hover {
+      background-color: var(--green-hover);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--white);
+    border: 1px solid var(--coral);
+    color: var(--coral);
+    place-items: center;
+    text-decoration: none;
+    &:hover {
+      background-color: var(--white-hover);
+    }
+  }
+
+  &--tertiary {
+    width: 80px;
+    height: 30px;
+    background-color: var(--white);
+    border: 2px solid var(--green2);
+    color: var(--green2);
+    place-items: center;
+    text-decoration: none;
+    font-size: var(--sm);
+    text-transform: uppercase;
+    &:hover {
+      background-color: var(--white-hover);
+    }
+  }
+}
+.login__logo {
+  width: 150px;
+  margin-bottom: 20px;
+  justify-self: center;
+  display: none;
+}
+@media (max-width: 640px) {
+  .login__logo {
+    display: block;
+  }
+}

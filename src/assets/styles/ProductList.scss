@@ -1,0 +1,39 @@
+.home {
+  margin-top: 60px;
+}
+.home__logo {
+  a {
+    display: flex;
+    img {
+      width: 150px;
+      margin: 20px auto;
+      display: none;
+    }
+    @media (max-width: 640px) {
+      img {
+        display: block;
+      }
+    }
+  }
+}
+.home__container {
+  margin-top: 20px;
+}
+.ProductList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 26px;
+  place-content: center;
+}
+.loading {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .ProductList {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+}

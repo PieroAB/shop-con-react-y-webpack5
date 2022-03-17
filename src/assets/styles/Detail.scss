@@ -1,0 +1,147 @@
+.detail {
+  margin-top: 60px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+  &__left {
+    height: calc(100vh - 60px);
+    display: grid;
+    place-content: center;
+  }
+  &__image {
+    width: 350px;
+
+    img {
+      display: grid;
+      width: 330px;
+      height: 330px;
+      margin: 0 auto;
+    }
+  }
+
+  &__right {
+    padding: 20px 40px;
+  }
+
+  &__title {
+    text-align: center;
+    p {
+      font-size: var(--xl);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  &__description {
+    margin-bottom: 30px;
+    .description {
+      text-align: justify;
+      color: var(--very-light-pink);
+    }
+
+    .price {
+      font-size: 25px;
+      color: var(--coral);
+      font-weight: bold;
+    }
+  }
+  &__quantity {
+    display: flex;
+
+    select {
+      display: flex;
+      width: 130px;
+      padding: 9px;
+      font-size: var(--md);
+      line-height: 1.5;
+      color: #495057;
+      background-color: var(--white);
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    button {
+      width: 200px;
+      background-color: var(--addCart);
+      border-color: var(--addCart);
+      font-size: var(--md);
+      font-weight: 500;
+      display: block;
+      border-radius: 5px;
+      color: var(--white-hover);
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--addCart-hover);
+        border-color: var(--addCart-hover);
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .detail {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .detail {
+    width: 100%;
+    grid-template-columns: 100%;
+
+    &__left,
+    &__right {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    &__left {
+      height: 330px;
+    }
+    &__image {
+      width: 300px;
+      img {
+        display: grid;
+        width: 270px;
+        height: 270px;
+      }
+    }
+    &__description {
+      margin-bottom: 50px;
+    }
+    &__right {
+      padding: 10px 20px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .detail {
+    &__left,
+    &__right {
+      margin: 0 auto;
+    }
+
+    &__quantity {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 8px 12px;
+      width: 95%;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 150px auto;
+      border-top: 1px solid #e7c1c1;
+      background: #f7f7f7;
+      select {
+        width: auto;
+        margin-right: 0px;
+      }
+      button {
+        width: auto;
+      }
+    }
+  }
+}
